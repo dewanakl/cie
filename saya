@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+<?php
+
+define('START_TIME', microtime(true));
+
+require_once 'app/Kernel.php';
+
+/**
+ * Create this console application kernel then
+ * Create console object and run
+ * 
+ * it's simple
+ */
+
+exit(Kernel::console()
+    ->make(\Core\Support\Console::class, array($argv))
+    ->run());
